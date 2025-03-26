@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GithubAuthProvider, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
-    apiKey: "AIzaSyAQjEkCHNeQxgSox6YL-Y0MvbCDhY28xrc",
-    authDomain: "pokosearch.firebaseapp.com",
-    projectId: "pokosearch",
-    storageBucket: "pokosearch.firebasestorage.app",
-    messagingSenderId: "453218361165",
-    appId: "1:453218361165:web:3d3315917ee936a3cda104",
-    measurementId: "G-GWBVZWJ9CB"
-  };
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
