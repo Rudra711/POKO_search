@@ -25,7 +25,6 @@ const signInWithGitHub = async () => {
     console.error("GitHub Auth Error:", error);
   }
 };
-console.log("Firebase API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
 
 const logout = async () => {
   await signOut(auth);
